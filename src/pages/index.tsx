@@ -5,9 +5,9 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ data }: any) {
-  console.log("🚀 ~ file: index.tsx:9 ~ Home ~ data", data);
-  
+export default function Home(/* { data }: any */) {
+  // console.log("🚀 ~ file: index.tsx:9 ~ Home ~ data", data);
+
   return (
     <>
       <Head>
@@ -131,19 +131,19 @@ export default function Home({ data }: any) {
   )
 }
 
-export const getServerSideProps = async ({ req }: any) => {
-  const domain = req.headers.host === "localhost:3000" ? "wetow.info" : req.headers.host.replace("https://", "").replace("http://", "").replace("www.", "")
-  const response = await fetch(
-    `https://deployapi.ecommcube.com/api/site?${new URLSearchParams({
-      domain: domain,
-    }).toString()}`
-  );
-  const data = await response.json();
+// export const getServerSideProps = async ({ req }: any) => {
+//   const domain = req.headers.host === "localhost:3000" ? "wetow.info" : req.headers.host.replace("https://", "").replace("http://", "").replace("www.", "")
+//   const response = await fetch(
+//     `https://deployapi.ecommcube.com/api/site?${new URLSearchParams({
+//       domain: domain,
+//     }).toString()}`
+//   );
+//   const data = await response.json();
 
-  return {
-    props: {
-      data
-    },
-  };
-};
+//   return {
+//     props: {
+//       data
+//     },
+//   };
+// };
 
