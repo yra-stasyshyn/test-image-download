@@ -5,8 +5,7 @@ import styles from '@/styles/Home.module.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home(/* { data }: any */) {
-  // console.log("🚀 ~ file: index.tsx:9 ~ Home ~ data", data);
+export default function Home() {
 
   return (
     <>
